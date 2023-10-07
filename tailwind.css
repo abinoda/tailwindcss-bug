@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.line-top,
+.line-middle,
+.line-bottom {
+  @apply block absolute h-0.5 w-6 bg-black transform transition duration-300 ease-in-out;
+}
+
+.line-top {
+  @apply -translate-y-2;
+}
+.line-bottom {
+  @apply translate-y-2;
+}
+
+.nav-open .line-top {
+  @apply translate-y-0 rotate-45;
+}
+
+.nav-open .line-bottom {
+  @apply translate-y-0 -rotate-45;
+}
+
+.nav-open .line-middle {
+  @apply opacity-0;
+}

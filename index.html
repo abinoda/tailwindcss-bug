@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<link href="/tailwind.build.css" rel="stylesheet">
+</head>
+<body>
+  <button class="w-8 h-8 relative" id="btn">
+    <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <span class="line-top">
+      </span>
+      <span class="line-middle">
+      </span>
+      <span class="line-bottom">
+      </span>
+    </div>
+  </button>
+  <script>
+    const navBtn = document.getElementById("btn");
+
+    navBtn.addEventListener("click", function() {
+      const body = document.body;
+
+      if (body.classList.contains("nav-open")) {
+       body.classList.remove("nav-open");
+      } else {
+        body.classList.add("nav-open");
+      }
+    });
+  </script>
+</body>
+</html>
